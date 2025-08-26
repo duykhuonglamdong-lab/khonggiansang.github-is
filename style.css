@@ -1,0 +1,51 @@
+/* Reset & base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.6; color: #222; }
+a { text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* Layout */
+.container { width: min(1100px, 90%); margin: 0 auto; }
+.site-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; z-index: 10; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.logo { font-weight: 800; font-size: 22px; letter-spacing: 1px; }
+.nav a { margin-left: 16px; padding: 8px 10px; border-radius: 6px; }
+.nav a[aria-current="page"] { background: #f2f2f2; }
+
+.hero { background: linear-gradient(180deg, #f8f9ff, #ffffff); padding: 60px 0; text-align: center; }
+.hero h1 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 10px; }
+.hero p { font-size: 18px; margin: 0 0 22px; }
+
+.btn { display: inline-block; padding: 12px 18px; border-radius: 10px; font-weight: 600; border: 1px solid #222; }
+.btn:hover { transform: translateY(-1px); }
+.btn-outline { background: transparent; }
+
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 40px 0; }
+.feature { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 18px; }
+
+.cta { text-align: center; padding: 40px 0; }
+.page-title { margin-top: 24px; }
+
+.grid.products { display: grid; grid-template-columns: repeat(auto-fill,minmax(230px,1fr)); gap: 18px; margin: 20px 0 30px; }
+.card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.card-media { aspect-ratio: 4/3; background: #f2f3f5; display: grid; place-items: center; font-size: 14px; color: #666; }
+.card-body { padding: 14px; }
+.price { font-weight: 700; }
+
+.policy { margin-bottom: 40px; }
+
+.contact-form { display: grid; gap: 12px; max-width: 640px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 10px; font: inherit; }
+.contact-form button { width: fit-content; }
+
+.site-footer { border-top: 1px solid #eee; padding: 20px 0; margin-top: 40px; }
+.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.copyright { text-align: center; padding-top: 10px; color: #666; }
+
+/* Responsive */
+@media (max-width: 720px) {
+  .features { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .nav a { margin-left: 8px; }
+}
